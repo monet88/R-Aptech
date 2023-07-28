@@ -45,13 +45,11 @@ if (condition) {
  # manually (as if you're playing the lottery), and compare the two. 
  
  # Hint: look into the length() and setdiff() functions 
- lottery_numbers <- c(5, 10, 15, 20, 25, 30)  # Randomly generated lottery numbers
- guessed_numbers <- c(10, 15, 20, 25, 30, 35)  # Manually populated guessed numbers
+ lottery_numbers <- sample(1:9, 6)  # Randomly generated lottery numbers
+ guessed_numbers <- c(1, 4, 7, 8, 9, 6)  # Manually populated guessed numbers
  
  if (length(setdiff(guessed_numbers, lottery_numbers)) == 0) {
    print("Mom wins the lottery!")
  } else {
    print("Mom did not win the lottery.")
  }
-
-
